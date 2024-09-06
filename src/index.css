@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.input-field {
+  @apply border border-gray-300 rounded-lg p-3 w-full bg-gray-700 text-gray-200 text-xl  focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.btn-primary {
+  @apply bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600;
+}
+
+
+.flights-page {
+  --travel-primitives-themeable-image-default: url(https://www.gstatic.com/travel-frontend/animation/hero/flights_nc_4.svg);
+  --travel-primitives-themeable-image-dark: url(https://www.gstatic.com/travel-frontend/animation/hero/flights_nc_dark_theme_4.svg);
+  background-image: var(--travel-primitives-themeable-image-default);
+  background-size: cover;
+  background-position: center;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .flights-page {
+    background-image: var(--travel-primitives-themeable-image-dark);
+  }
+}
